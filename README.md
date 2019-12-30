@@ -12,6 +12,16 @@ Contact: Instagram: @siddhantmadhur
 
 How to play.
 
+Method !:
+
+1)Download PyCharm and Python3
+
+2)After installing and running PyCharm once run this code in the program.
+
+3)Enjoy.
+
+OR IF YOU DONT WANT TO INSTALL PYCHARM
+
 1) Download Python3 from :www.bit.ly/Python3Download
 
 2) Click on the Windows Search Bar and after searching open CMD.
