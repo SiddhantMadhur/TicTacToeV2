@@ -1,19 +1,21 @@
 #This is the second iteration of the old incomplete and inefficient TicTacToe Engine.
 #This program will render a game of TicTacToe.
 #Made by Siddhant Madhur.
-#Version = 2.2
+#Version = 2.3
 
-def endGameX(winnerX):
+def endGameX(winnerX): #This function dictates that X is the winner of the Game.
     print("The game has ended")
     print("Winner is X")
+    print("Congrats to " + nameX + " for winning!"
     exit()
 
-def endGameO(winnerO):
+def endGameO(winnerO): #This function dictates that O is the winner of the Game.
     print("The game has ended")
     print("Winner is O")
+    print("Congrats to " + nameO + " for winning!")
     exit()
 
-def pr(statement):
+def pr(statement): #This is an option function because all it does is make it so instead of writing print again and again I can just write pr
     print(statement)
 
 def showTable():
@@ -21,7 +23,7 @@ def showTable():
     pr(" " + ML + " | " + MM + " | " + MR + " ")
     pr(" " + BL + " | " + BM + " | " + BR + " ")
 
-def displayError(errorMessage):
+def displayError(errorMessage): #Since this program uses a lot of if and elif statements, all that else statements carry is a displayError message
     print("THERE IS AN ERROR")
     print("ERROR MESSAGE: " + errorMessage)
     print("PLEASE CONSULT README.TXT")
@@ -30,7 +32,7 @@ def displayError(errorMessage):
 def convert(list):
     return tuple(list)
 
-def checkGame():
+def checkGame(): #Checks whether all the possible win combinations have occured yet.
     if TL == "X" and TM == "X" and TR == "X":
         endGameX()
     elif ML == "X" and MM == "X" and MR == "X":
@@ -102,14 +104,18 @@ Player1 = input()
 
 if Player1 == "X":
     turn = ["X", "O"]
+    nameX = playername1
+    nameO = playername2
 elif Player1 == "O":
     turn = ["O", "X"]
+    nameO = playername1
+    nameX = playername2
 else:
     displayError("Error 104")
 
 showTable()
 
-pr("Player 1 is starting....\nWhich number would you like to replace?")
+pr(nameX + " is startting....\nWhich number would you like to replace?")
 
 firstMove = input("Number = ")
 
@@ -184,7 +190,6 @@ showTable()
 checkGame()
 
 pr(turn[1]+" is playing now...")
-
 
 secondMove = input("Number = ")
 
@@ -631,65 +636,65 @@ checkGame()
 
 pr(turn[1] + " is playing now...")
 
-eitghMove = input("Number = ")
+eigthMove = input("Number = ")
 
-if eitghMove == "1":
+if eighthMove == "1":
     if TL == "_":
         TL = turn[1]
     elif TL == "X" or TL == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "2":
+elif eighthMove == "2":
     if TM == "_":
         TM = turn[1]
     elif TM == "X" or TM == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "3":
+elif eighthMove == "3":
     if TR == "_":
         TR = turn[1]
     elif TR == "X" or TR == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "4":
+elif eighthMove == "4":
     if ML == "_":
         ML = turn[1]
     elif ML == "X" or ML == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "5":
+elif eighthMove == "5":
     if MM == "_":
         MM = turn[1]
     elif MM == "X" or MM == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "6":
+elif Move == "6":
     if MR == "_":
         MR = turn[1]
     elif MR == "X" or MR == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "7":
+elif eighthMove == "7":
     if BL == "_":
         BL = turn[1]
     elif BL == "X" or BL == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "8":
+elif eighthMove == "8":
     if BM == "_":
         BM = turn[1]
     elif BM == "X" or BM == "O":
         pr("Collision Detected! As penalty your move is being skipped....")
     else:
         displayError("Error Code 100")
-elif eitghMove == "9":
+elif eighthMove == "9":
     if BR == "_":
         BR = turn[1]
     elif BR == "X" or BR == "O":
