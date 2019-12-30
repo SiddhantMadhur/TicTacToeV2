@@ -3,13 +3,13 @@
 #Made by Siddhant Madhur.
 #Version = 2.3
 
-def endGameX(winnerX): #This function dictates that X is the winner of the Game.
+def endGameX(): #This function dictates that X is the winner of the Game.
     print("The game has ended")
     print("Winner is X")
-    print("Congrats to " + nameX + " for winning!"
+    print("Congrats to " + nameX + " for winning!")
     exit()
 
-def endGameO(winnerO): #This function dictates that O is the winner of the Game.
+def endGameO(): #This function dictates that O is the winner of the Game.
     print("The game has ended")
     print("Winner is O")
     print("Congrats to " + nameO + " for winning!")
