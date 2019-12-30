@@ -115,7 +115,7 @@ else:
 
 showTable()
 
-pr(nameX + " is startting....\nWhich number would you like to replace?")
+pr(playername1 + " is startting....\nWhich number would you like to replace?")
 
 firstMove = input("Number = ")
 
